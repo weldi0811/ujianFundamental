@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="ujian3.js"></script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        form {
+            width: 45%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <p id='test'></p>
+    <form >
+        <fieldset>
+            <legend>Filter</legend>
+            <p>Nama: <input type="text" id="search" oninput="funFilterName()"></p>
+            <p>Umur: <input type="number" name="num1" id="num1" onkeyup="funFilterUmur()"> - <input type="number" name="num2" id="num2"
+                    onkeyup="funFilterUmur()"></p>
+            <p>Pekerjaan: <select name="job" id="job">
+                </select>
+            </p>
+            <p><input type="button" value="SearchJob" onclick="funFilterJob()"></p>
+            <P><input type="radio" name="searchgender" value="PRIA">PRIA<input type="radio" name="searchgender" value="WANITA">WANITA</p>
+            <P><input type="button" value="Search gender" onclick="funFilterGender()"></p>  
+        </fieldset>
+
+    <fieldset>
+        <legend>Sorting</legend>
+        <p><input type="button" value="Sort Nama" onclick="funSortNama()">
+        <input type="button" value="Sort Umur" onclick="funSortUmur()">
+        <input type="button" value="Sort Kelamin" onclick="funSortGender()">
+        <input type="button" value="Sort Pekerjaan" onclick="funSortJob()"></p>
+    </fieldset>
+        
+        <fieldset>
+            <legend>Input Data</legend>
+            <table>
+                <td><input type="text" name="nama" id="nama"></td>
+                <td><input type="number" name="nama" id="umur"></td>
+                <td><input type="text" name="nama" id="jobInput"></td>
+                <td><input type="radio" name="gender"value="PRIA">PRIA<input type="radio" name="gender"value="WANITA">WANITA</td>
+            </table>
+            <p><input type="button" value="Submit" onclick="funInputData()"></p>
+        </fieldset>
+    </form>
+    <center>
+        <table id="myTable">
+            <thead>
+                <th>Nama</th>
+                <th>Umur</th>
+                <th>Pekerjaan</th>
+                <th>Kelamin</th>
+            </thead>
+            <tbody id="here">
+                
+            </tbody>
+        </table>
+    </center>
+    
+
+</body>
+
+</html>
